@@ -8,7 +8,7 @@ version           "1.1.0"
 recipe "nginx", "Installs nginx package and sets up configuration with Debian apache style with sites-enabled/sites-available"
 recipe "nginx::source", "Installs nginx from source and sets up configuration with Debian apache style with sites-enabled/sites-available"
 
-%w{ ubuntu debian centos redhat amazon scientific oracle fedora }.each do |os|
+%w{ ubuntu debian }.each do |os|
   supports os
 end
 
@@ -18,9 +18,6 @@ end
 
 depends 'ohai', '>= 1.1.0'
 
-%w{ runit bluepill yum }.each do |cb|
-  recommends cb
-end
 
 attribute "nginx/dir",
   :display_name => "Nginx Directory",
