@@ -19,7 +19,7 @@
 # limitations under the License.
 #
 
-include_attribute 'chef-nginx'
+include_attribute 'nginx'
 
 default['nginx']['source']['prefix']                  = "/usr/local/nginx-#{node['nginx']['version']}"
 default['nginx']['source']['conf_path']               = "/etc/nginx/nginx.conf"
